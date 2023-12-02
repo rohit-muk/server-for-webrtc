@@ -202,4 +202,5 @@ const initializeConnectionHandler = (data, socket) => {
 
 server.listen(PORT, () => {
   console.log(`Server is listening on ${PORT}`);
+  res.send("server is working");
 });
