@@ -14,6 +14,10 @@ app.use(cors());
 let connectedUsers = [];
 let rooms = [];
 
+app.get("/", (req, res) => {
+  res.send("server is live");
+});
+
 // create route to check if room exists
 app.get("/api/room-exists/:roomId", (req, res) => {
   const { roomId } = req.params;
@@ -202,5 +206,4 @@ const initializeConnectionHandler = (data, socket) => {
 
 server.listen(PORT, () => {
   console.log(`Server is listening on ${PORT}`);
-  res.send("server is working");
 });
